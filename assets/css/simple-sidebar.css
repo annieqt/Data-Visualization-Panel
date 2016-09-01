@@ -1,0 +1,72 @@
+body {
+    overflow-x: hidden;
+}
+
+/* Toggle Styles */
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    width: 0;
+    background-color: white;
+    margin-left: -200px;
+    /*overflow-y: auto;*/
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    /*position: absolute;*/
+    /*margin-left: 15px;*/
+}
+
+#wrapper.toggled {
+    padding-left: 200px;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    /*position: absolute;*/
+    margin-right: -150px;
+}
+
+@media (min-width: 768px) {
+    #wrapper {
+        padding-left: 200px;
+    }
+
+    #sidebar-wrapper {
+        width: 200px;
+        /*width: 100%;*/
+    }
+
+    #page-content-wrapper {
+        padding-left: 30px;
+        position: relative;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
