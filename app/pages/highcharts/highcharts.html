@@ -1,0 +1,100 @@
+<div ng-app="myApp.highcharts">
+    <div ng-controller="LineChartCtrl">
+        <div class="row">
+            <div class="col-md-3">
+                <p class="input-group">
+                    <input type="text" class="form-control" uib-datepicker-popup="{{format}}"
+                           ng-model="period.fromDate"
+                           is-open="fromCal.opened" datepicker-options="dateOptions1" ng-required="true"
+                           close-text="Close"/>
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="openFromCal()">
+                        <span class="caret"></span>
+                        <!--<span class="icon ss-calendar"></span>-->
+                    </button>
+                  </span>
+                </p>
+            </div>
+
+            <div class="col-md-3">
+
+                <p class="input-group">
+                    <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="period.toDate"
+                           is-open="toCal.opened" datepicker-options="dateOptions2" ng-required="true"
+                           close-text="Close"/>
+                <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="openToCal()">
+               <i class="glyphicon glyphicon-calendar"></i>
+                </button>
+                </span>
+                </p>
+                <!--<p class="input-group">-->
+                <!--<input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="period.toDate"-->
+                <!--is-open="toCal.opened" datepicker-options="dateOptions2" ng-required="true"-->
+                <!--close-text="Close"/>-->
+                <!--<span class="input-group-btn">-->
+                <!--<button type="button" class="btn btn-default" ng-click="openToCal()">-->
+                <!--<span class="caret"></span>-->
+                <!--&lt;!&ndash;<span style="alignment: center" class="icon ss-calendar"></span>&ndash;&gt;-->
+                <!--</button>-->
+                <!--</span>-->
+                <!--</p>-->
+            </div>
+
+            <div class="col-md-3">
+                <button ng-click="searchFn()" type="submit" class="col-md-12 w3-btn w3-blue">Search</button>
+            </div>
+
+            <div class="col-md-3">
+                <form>
+                    <div class="form-group">
+                        <select id="time" class="form-control" ng-model="defaultTime">
+                            <option value="all" selected>--Default Time Period--</option>
+                            <option value="LastQuarter">Last Quarter</option>
+                            <option value="LastMonth">Last Month</option>
+                            <option value="LastWeek">Last Week</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12">
+                <div class="w3-card-2">
+                    <div class="history-chart-container">
+                        <div ng-show="loading" class="progress">
+                            <uib-progressbar class="progress-striped active" value="dynamic" type="info">
+                                Loading, please wait...
+                            </uib-progressbar>
+                        </div>
+                        <div ng-show="!loading">
+                            <line-chart data="series">
+                                Placeholder for line chart
+                            </line-chart>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12">
+            <div class="w3-card-2">
+                <div class="bar-chart-container" ng-controller="BarChartCtrl">
+                    <div ng-show="loading" class="progress">
+                        <uib-progressbar class="progress-striped active" value="dynamic" type="info">
+                            Loading, please wait...
+                        </uib-progressbar>
+                    </div>
+                    <div ng-show="!loading">
+                        <bar-chart data="data">
+                            Placeholder for bar chart
+                        </bar-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
