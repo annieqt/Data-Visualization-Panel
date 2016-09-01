@@ -1,0 +1,37 @@
+.btn {
+    background-color: #4497de;
+}
+
+#sidebar-button {
+    background-color: #9c27b0;
+}
+
+#header {
+    background-color: #223E6E;
+}
+
+.progress-bar-info {
+    background-color: #4497de;
+}
+
+.loader-container {
+    width: 80%;
+    margin:0 auto;
+}
+
+#sidebar {
+    width: inherit;
+    min-width: 220px;
+    max-width: 220px;
+    background-color: #f5f5f5;
+    float: left;
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#main {
+    height: 100%;
+    overflow: auto;
+}
