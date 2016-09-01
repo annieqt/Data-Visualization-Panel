@@ -1,0 +1,51 @@
+.highcharts-container {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+line-chart{
+    width: 880px;
+    height: 310px;
+    display: block;
+    margin: 0;
+}
+
+bar-chart{
+    width: 880px;
+    height: 302px;
+    display: block;
+    margin: 0;
+}
+
+.search-result{
+    /*height: 245px;*/
+    /*overflow: auto;*/
+}
+
+.search-result-container {
+    height: 280px;
+    overflow: auto;
+}
+
+.panel-actions {
+    margin-top: -20px;
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.panel-fullscreen {
+    display: block;
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+.panel-actions a {
+    color: #333;
+}
