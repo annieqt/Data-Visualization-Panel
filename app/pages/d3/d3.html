@@ -1,0 +1,25 @@
+<div>
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12">
+            <div class="w3-card-2">
+                <div ng-controller="TreeCtrl">
+                    <uib-accordion>
+                        <div uib-accordion-group id="timeline-panel" heading="Tree Graph" is-open="true">
+                            <div class="loader-container">
+                                <div ng-show="loading" class="progress">
+                                    <uib-progressbar class="progress-striped active" value="dynamic" type="info">
+                                        Loading, please wait...
+                                    </uib-progressbar>
+                                </div>
+                            </div>
+                            <div ng-show="!loading">
+                                <tree-graph chart-data="myData"></tree-graph>
+                            </div>
+                        </div>
+                    </uib-accordion>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
