@@ -1,0 +1,50 @@
+<style type="text/css">
+</style>
+
+<div>
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12">
+            <div class="w3-card-2">
+                <div class="network-graph-container" ng-controller="NetworkGraphCtrl">
+                    <uib-accordion>
+                        <div uib-accordion-group id="network-panel" heading="Network Graph" is-open="true">
+                            <div class="loader-container">
+                                <div ng-show="loading" class="progress">
+                                    <uib-progressbar class="progress-striped active" value="dynamic" type="info">
+                                        Loading, please wait...
+                                    </uib-progressbar>
+                                </div>
+                            </div>
+
+                            <div ng-show="!loading">
+                                <network-graph ng-show="show" options="graphOptions" data="graphData">Placeholder for
+                                    generic chart
+                                </network-graph>
+                            </div>
+                        </div>
+                    </uib-accordion>
+                </div>
+            </div>
+            <div class="w3-card-2">
+                <div class="network-graph-container" ng-controller="TimelineGraphCtrl">
+                    <uib-accordion>
+                        <div uib-accordion-group id="timeline-panel" heading="Timeline Graph" is-open="true">
+                            <div class="loader-container">
+                                <div ng-show="loading" class="progress">
+                                    <uib-progressbar class="progress-striped active" value="dynamic" type="info">
+                                        Loading, please wait...
+                                    </uib-progressbar>
+                                </div>
+                            </div>
+                            <div ng-show="!loading">
+                                <timeline-graph ng-show="show" options="graphOptions" data="graphData">Placeholder for
+                                    generic chart
+                                </timeline-graph>
+                            </div>
+                        </div>
+                    </uib-accordion>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
