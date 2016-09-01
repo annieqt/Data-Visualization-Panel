@@ -7,7 +7,7 @@
     angular.module('myApp.vis')
         .controller('TimelineGraphCtrl', TimelineGraphCtrl);
 
-    TimelineGraphCtrl.$inject = ['$scope', '$rootScope', 'chartSize', 'color', 'DSType'];
+    TimelineGraphCtrl.$inject = ['$scope', '$rootScope', 'chartSize', 'color'];
 
     /** @ngInject */
     function TimelineGraphCtrl($scope, $rootScope, chartSize, color, DSType) {
