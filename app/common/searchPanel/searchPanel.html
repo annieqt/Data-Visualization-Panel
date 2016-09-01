@@ -1,0 +1,63 @@
+<div class="row">
+    <div ng-controller="SearchPanelCtrl">
+        <div class="w3-card-2">
+            <div class="w3-container w3-blue">
+                <h4>Search Panel</h4>
+            </div>
+            <form class="w3-container" ng-submit="searchItems()">
+                <br>
+                Param1
+                <input class="w3-input w3-border" ng-model="p1" placeholder="Param 1" type="text">
+                <br>
+
+                Param2
+                <input class="w3-input w3-border" ng-model="p2" placeholder="Param 2" type="text">
+                <br>
+
+                Param3
+                <input class="w3-input w3-border" ng-model="p3" placeholder="Param 3" type="text">
+                <br>
+
+                Param4
+                <input class="w3-input w3-border" ng-model="p4" placeholder="Param 4" type="text">
+                <br>
+
+                <button type="submit" class="col-md-12 w3-btn w3-blue">Search</button>
+                <br>
+                <br>
+            </form>
+        </div>
+        <br>
+        <div class="w3-card-2">
+            <div class="w3-container w3-blue">
+                <h4>Search Results</h4>
+            </div>
+            <div class="search-result-container">
+                <div class="loader-container">
+                    <div ng-show="loading" class="progress">
+                        <uib-progressbar class="progress-striped active" value="dynamic" type="info">
+                            Loading, please wait...
+                        </uib-progressbar>
+                    </div>
+                </div>
+                <div class="w3-responsive" class="search-result" ng-show="show">
+                    <table class="w3-table w3-bordered w3-striped">
+                        <thead>
+                        <tr>
+                            <th class="col-md-3">ID</th>
+                            <th class="col-md-9">Name</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr ng-repeat="i in items" ng-click="newItemSelected(i)">
+                            <td>{{$index}}</td>
+                            <td>{{i.name }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
