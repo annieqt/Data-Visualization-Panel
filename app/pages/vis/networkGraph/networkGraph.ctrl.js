@@ -7,7 +7,7 @@
     angular.module('myApp.vis')
         .controller('NetworkGraphCtrl', NetworkGraphCtrl);
 
-    NetworkGraphCtrl.$inject = ['$scope', '$rootScope', 'chartSize', 'color', 'DSType'];
+    NetworkGraphCtrl.$inject = ['$scope', '$rootScope', 'chartSize', 'color'];
 
     /** @ngInject */
     function NetworkGraphCtrl($scope, chartSize) {
